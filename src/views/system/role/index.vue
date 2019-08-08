@@ -65,6 +65,7 @@ export default {
 			deptDicts: [],
 			isAdd: true,
 			list: [],
+			index:0,
 			total: 0,
 			listLoading: false,
 			listQuery: {
@@ -131,7 +132,7 @@ export default {
 		update(index, row) {
 			this.isAdd = false;
 			const _this = this.$refs.form;
-			_this.indexs = index
+			this.index = index
 			_this.form = JSON.parse(JSON.stringify(row));
 			_this.dialogVisible = true;
 		},

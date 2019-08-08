@@ -43,7 +43,7 @@ router.beforeEach((to, from, next) => {
 			NProgress.done() // if current page is dashboard will not trigger	afterEach hook, so manually handle it
 		} else {
 			if (!routers) {
-				axios.get('api/menus/build').then(
+				axios.get('mock/menus/build').then(
 					data => {
 						if (data.menu) {
 							store.state.user = data.user

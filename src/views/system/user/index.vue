@@ -74,7 +74,7 @@ export default {
 		getList() {
 			this.listLoading = true;
 			if (this.mock === 1) {//测试用
-				this.axios.get('api/user/page', { params: this.listQuery }).then(
+				this.axios.get('mock/user/page', { params: this.listQuery }).then(
 					data => {
 						if (data.data) {
 							//this.list = data.content; // 生产使用

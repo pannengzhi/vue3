@@ -51,7 +51,7 @@ export default {
 			this.$refs.loginForm.validate(valid => {
 				if (valid) {
 					const params = { username: this.loginForm.username, password: this.$md5(this.loginForm.password), remember: this.loginForm.remember };
-					this.axios.post('api/login', params).then(
+					this.axios.post('mock/login', params).then(
 						data => {
 							if (data.code === 1) {
 								setToken(data.data);

@@ -76,7 +76,7 @@ export default {
 						this.resetForm();
 						this.$message({ showClose: true, message: '修改成功', type: 'success', duration: 2000 });
 						this.loading = false;
-						this.$parent.allData.splice(this.$parent.indexs, 0, data.data)
+						this.$parent.list.splice(this.$parent.index, 1, data.data)
 					}
 				},
 				error => {
